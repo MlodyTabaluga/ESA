@@ -1,0 +1,56 @@
+﻿<Window x:Class="TIProjekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TIProjekt"
+        Title="Job Esa" Height="650" Width="1200">
+    <Border x:Name="Brd_Main">
+        <Grid Background="LightBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="54"/>
+                <RowDefinition Height="73"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+            </Grid>
+
+            <Image Grid.Row="1" Source="/images/app/logo.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="80" Width="79"/>
+            <StackPanel Grid.Row="2" Background="LightBlue" Margin="0,13,0,0">
+                <StackPanel/>
+                
+                <Label Content="Witaj na stronie ktorej zaufalo" Height="25"/>
+                <Label Content="Ponad 100 tysiecy osob szuka-" Height="25"/>
+                <Label Content="jacych pracownikow jak i praco-" Height="25"/>
+                <Label Content="dawcow. Mamy 30 tysiecy" Height="25"/>
+                <Label Content="aktywnych ogloszen oraz 2000" Height="25"/>
+                <Label Content="rozwnych kategiorii prac na" Height="25"/>
+                <Label Content="umowe jak i na zlecenie. W razie" Height="25"/>
+                <Label Content="prolemow napsiz do nas na" Height="25"/>
+                <Label Content="email: JobSupport@gmail.com" Height="25"/>
+                <StackPanel Height="30" Width="130" Margin="10,220,10,10">
+                    <Button  Click="LogOut_clicked" Content="Wyloguj się" Background="LightCoral" Height="27" Width="131"/>
+                </StackPanel>
+            </StackPanel>
+            <Frame x:Name="Page" NavigationUIVisibility="Hidden" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Margin="2,2,2,2"/>
+            <RadioButton x:Name="RB_ComapnyProfile" Content="COMPANY INFO" FontSize="14"  Click="CompanyProfile_cliked" Grid.Column="1" Margin="10,11,784,11"/>
+            <RadioButton Content="MAIN PAGE" FontSize="14" IsChecked="True" Click="Home_clicked" Grid.Column="1" Margin="383,10,517,12"/>
+            <RadioButton Content="COMPANY MANAGEMENT"  FontSize="14"  Click="Company_clicked" Grid.Column="1" Margin="768,10,10,12"/>
+        </Grid>
+    </Border>
+</Window>
